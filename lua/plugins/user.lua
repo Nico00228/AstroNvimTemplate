@@ -1,7 +1,6 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- You can also add or configure plugins by creating files in this `plugins/` folder
 -- Here are some examples:
+-- TODO Test
 
 ---@type LazySpec
 return {
@@ -81,5 +80,11 @@ return {
         Rule("a", "a", "-vim")
       )
     end,
+  },
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {},
+    event = "User AstroFile",
   },
 }
